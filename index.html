@@ -21,6 +21,34 @@
     <input type="radio" v-model="radiobutton" value="option-2"> Option 2
     <br>
     Your choice is: {{ radiobutton }}
+    <br>
+    <label for="">Watching Movie</label>
+    <input type="checkbox" value="watching-movie" v-model="checkbox">
+    <br>
+    <label for="">Traveling</label>
+    <input type="checkbox" value="traveling" v-model="checkbox">
+    <br>
+    <label for="">Reading</label>
+    <input type="checkbox" value="reading" v-model="checkbox">
+    <br>
+    My hobbies are: {{ checkbox }}
+    <ul>
+      <li v-for="choice in checkbox">{{ choice }}</li>
+    </ul>
+    <br>
+    Choose your favorite programming language:
+    <select v-model="select" multiple>
+      <option value="" disabled>choice programming language</option>
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+      <option value="c#">C#</option>
+    </select>
+    <br>
+    Your favorite programming language is: {{ select }}
+    <br>
+    <ul>
+      <li v-for="sel in select">{{ sel }}</li>
+    </ul>
   </div>
 
   <!-- development version, includes helpful console warnings -->

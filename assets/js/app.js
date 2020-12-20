@@ -4,6 +4,8 @@ var app = new Vue({
     message: '',
     textarea: '',
     radiobutton: '',
+    checkbox: [],
+    select: [],
   },
   
 })
