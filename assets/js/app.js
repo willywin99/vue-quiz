@@ -1,16 +1,16 @@
 var app = new Vue({
   el: '#app',
   data: {
-    content: '',
-    vehicles: ['car', 'motorcycle', 'bike']
-  },
-  methods: {
-    addVehicle: function () {
-      this.vehicles.push(this.content);
-      this.content = '';
-    },
-    removeVehicle: function (index) {
-      this.vehicles.splice(index, 1);
+    vehicles: [
+      { type: 'Car', brand: 'Toyota', color: 'Metallic Silver'},
+      { type: 'Motorcyle', brand: 'Honda', color: 'Red'},
+      { type: 'Bike', brand: 'BMX', color: 'Black'},
+    ],
+    object: {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 30,
     }
-  }
+  },
+  
 })
