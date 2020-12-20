@@ -8,8 +8,9 @@
 </head>
 <body>
 
-  <div id="app" v-html='message'>
-    <!-- <p>{{ message }}</p> -->
+  <div id="app">
+    <p v-if="show">{{ message }}</p>
+    <p v-else="show">{{ message2 }}</p>
   </div>
 
   <!-- development version, includes helpful console warnings -->
