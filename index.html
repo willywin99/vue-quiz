@@ -9,16 +9,26 @@
 <body>
 
   <div id="app">
-    <button v-on:click="message = 'the button has been clicked using v-on:click!'">
-      Click
-    </button>
-    <button @click="message = 'the button has been clicked using @click!'">
-      Click Me!
-    </button>
-    <button @click="showAlert">
-      Show Alert!
-    </button>
+    <label for="">Press Enter Key</label>
+    <input 
+      type="text"
+      v-on:keyup.enter=" message = 'you pressing enter key'"
+    >
+
     <br>
+
+    <label for="">Press Any Key</label>
+    <input 
+      type="text"
+      @keyup.esc="escKey"
+      @keyup.space="spaceKey"
+      @keyup.up="upKey"
+      @keyup.down="downKey"
+      @keyup.65="aKey"
+    >
+
+    <br>
+
     {{ message }}
   </div>
 
