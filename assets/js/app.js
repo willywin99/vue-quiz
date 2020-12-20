@@ -1,22 +1,20 @@
-Vue.component('greeting', {
+Vue.component('blog-post', {
+  props: ['post'],
   template: `
     <div>
-      <b>Hello, Vue</b> <br>
-      <i>Hello, Vue</i> <br>
-      <u>Hello, Vue</u>
+      <h3> {{ post.title }} </h3>
+      <div v-html="post.content"></div>
     </div>
   `
 });
 
-Vue.component('button-counter', {
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  template: '<button v-on:click="count++">Click Me {{ count }} times</button>'
-});
-
 var app = new Vue({
   el: '#app',
+  data: {
+    posts: [
+      { id: 1, title: 'My journey with Vue', content: 'This is Content of <b>Post 1</b>' },
+      { id: 2, title: 'Blogging with Vue', content: 'This is Content of <b>Post 2</b>' },
+      { id: 3, title: 'Why Vue is so fun', content: 'This is Content of <b>Post 3</b>' },
+    ]
+  }
 });

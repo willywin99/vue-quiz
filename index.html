@@ -9,9 +9,12 @@
 <body>
 
   <div id="app">
-    <greeting></greeting>
-    <br>
-    <button-counter></button-counter>
+    <blog-post 
+      v-for="post in posts" :key="post.id"
+      :post="post"
+    >
+
+    </blog-post>
   </div>
 
   <!-- development version, includes helpful console warnings -->
