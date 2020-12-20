@@ -9,12 +9,9 @@
 <body>
 
   <div id="app">
-    <p v-if="show">{{ message }}</p>
-    <p v-else="show">{{ message2 }}</p>
-    <p>Result from {{ int1 }} + {{ int2 }} is {{ result }}</p>
-    <button v-on:click="sumProcess(2)">Process</button>
-    <input type="text" v-model="kilometers">
-    <input type="text" v-model="meters">
+    <input type="text" name="" id="" v-model="message">
+    <br>
+    {{ message }}
   </div>
 
   <!-- development version, includes helpful console warnings -->
