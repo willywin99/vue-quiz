@@ -9,11 +9,17 @@
 <body>
 
   <div id="app">
-    <img v-bind:src="imgFile" width="500" height="300" alt="">
+    <button v-on:click="message = 'the button has been clicked using v-on:click!'">
+      Click
+    </button>
+    <button @click="message = 'the button has been clicked using @click!'">
+      Click Me!
+    </button>
+    <button @click="showAlert">
+      Show Alert!
+    </button>
     <br>
-    <a v-bind:href="link">About Page</a>
-    <br>
-    <p v-bind:style="styleFont">Red Font</p>
+    {{ message }}
   </div>
 
   <!-- development version, includes helpful console warnings -->

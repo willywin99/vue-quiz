@@ -1,9 +1,11 @@
 var app = new Vue({
   el: '#app',
   data: {
-    imgFile: 'assets/img/interior.jpg',
-    link: 'https://google.com',
-    styleFont: 'color: red; font-size: 20px'
+    message: '',
   },
-  
+  methods: {
+    showAlert: function() {
+      alert('The button has been clicked to call this method!')
+    }
+  }
 })
