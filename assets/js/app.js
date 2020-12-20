@@ -8,6 +8,15 @@ Vue.component('greeting', {
   `
 });
 
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">Click Me {{ count }} times</button>'
+});
+
 var app = new Vue({
   el: '#app',
 });
