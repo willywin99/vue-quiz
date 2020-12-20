@@ -9,27 +9,29 @@
 <body>
 
   <div id="app">
-    <label for="">Press Enter Key</label>
-    <input 
-      type="text"
-      v-on:keyup.enter=" message = 'you pressing enter key'"
-    >
+    <ul>
+      <li>{{ vehicles[0] }}</li>
+    </ul>
+    <br>
+    <ul>
+      <li v-for="vehicle in vehicles">
+        {{ vehicle }}
+      </li>
+    </ul>
+    <br>
+
+    <label for="">Add vehicle</label>
+    <input type="text" v-model="content">
+    <button @click="addVehicle">Add</button>
 
     <br>
 
-    <label for="">Press Any Key</label>
-    <input 
-      type="text"
-      @keyup.esc="escKey"
-      @keyup.space="spaceKey"
-      @keyup.up="upKey"
-      @keyup.down="downKey"
-      @keyup.65="aKey"
-    >
-
-    <br>
-
-    {{ message }}
+    <ul>
+      <li v-for="(vehicle, index) in vehicles">
+        <button @click="removeVehicle(index)">x</button>
+        {{ vehicle }}
+      </li>
+    </ul>
   </div>
 
   <!-- development version, includes helpful console warnings -->
