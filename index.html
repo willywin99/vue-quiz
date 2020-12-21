@@ -9,12 +9,21 @@
 <body>
 
   <div id="app">
-    <blog-post 
-      v-for="post in posts" :key="post.id"
-      :post="post"
-    >
 
-    </blog-post>
+    <!-- <label for="">Add vehicle</label> -->
+    <input type="text" v-model="content">
+    <button @click.prevent="addName" v-show="!editStatus">Add</button>
+    <button @click.prevent="updateName" v-show="editStatus">Update</button>
+
+    <br>
+    <ul>
+      <li v-for="(name, index) in names">
+        {{ name }}
+        <button @click="editName(index)">Edit</button>
+        ||
+        <button @click="removeName(index)">Delete</button>
+      </li>
+    </ul>
   </div>
 
   <!-- development version, includes helpful console warnings -->
